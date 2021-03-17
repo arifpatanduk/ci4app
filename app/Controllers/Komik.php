@@ -14,13 +14,12 @@ class Komik extends BaseController
 	}
 	public function index()
 	{
-		$data = [
-			'title' => 'Dafar Komik'
-		];
-
 		// model
 		$komik = $this->komikModel->findAll();
-		dd($komik);
+		$data = [
+			'title' => 'Dafar Komik',
+			'komik' => $komik
+		];
 
 		return view('komik/index', $data);
 	}
