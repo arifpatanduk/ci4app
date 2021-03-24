@@ -9,14 +9,16 @@ class Pages extends BaseController
 	public function index()
 	{
 		$data = [
-			'title' => 'Home'
+			'title' => 'Home',
+			'active' => 'home'
 		];
 		return view('pages/home', $data);
 	}
 	public function about()
 	{
 		$data = [
-			'title' => 'About'
+			'title' => 'About',
+			'active' => 'about'
 		];
 		return view('pages/about', $data);
 	}
@@ -24,6 +26,7 @@ class Pages extends BaseController
 	{
 		$data = [
 			'title' => 'Contact Us',
+			'active' => 'contact',
 			'alamat' => [
 				[
 					'tipe' => 'Rumah',

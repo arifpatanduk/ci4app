@@ -16,6 +16,7 @@ class Komik extends BaseController
 	{
 		$data = [
 			'title' => 'Dafar Komik',
+			'active' => 'komik',
 			'komik' => $this->komikModel->getKomik()
 		];
 
@@ -26,7 +27,8 @@ class Komik extends BaseController
 	{
 		$data = [
 			'title' => 'Detail Komik',
-			'komik' => $this->komikModel->getKomik($slug)
+			'active' => 'komik',
+			'komik' => $this->komikModel->getKomik($slug),
 		];
 
 		return view('komik/detail', $data);
