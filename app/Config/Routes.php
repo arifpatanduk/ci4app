@@ -35,6 +35,7 @@ $routes->get('/', 'Pages::index');
 $routes->get('/pages/about', 'Pages::about');
 
 // komik detail
+$routes->get('/komik/create', 'Komik::create');
 $routes->get('/komik/(:segment)', 'Komik::detail/$1');
 
 /*

@@ -8,6 +8,19 @@
             <div class="card">
                 <div class="card-header">
                     <h5>Daftar Komik</h5>
+                    <div class="row">
+                        <div class="col-2">
+                            <a href="/komik/create" class="btn btn-primary my-2 ">Tambah Data</a>
+                        </div>
+                        <?php if (session()->getFlashData('pesan')) : ?>
+                            <div class="col-10 py-2 my-2 alert alert-success alert-dismissible fade show" role="alert">
+                                <?= session()->getFlashData('pesan'); ?>
+                                <button type="button" class="btn-sm btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
+
+                    </div>
+
                 </div>
                 <div class="card-body">
                     <table class="table">
@@ -38,5 +51,6 @@
         </div>
     </div>
 </div>
+
 
 <?= $this->endSection(); ?>
